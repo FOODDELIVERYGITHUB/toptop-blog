@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-lg-8">
             <div class="position-relative mb-3">
-                <img class="img-fluid h-40" style="object-fit: cover;" src="{{Storage::url( '.$post->cover)}}" alt="..." />
+                <img class="img-fluid h-40" style="object-fit: cover;" src="{{ Storage::url($post->cover) }}" alt="..." />
                 <h1 class="mt-5 mb-2 text-center text-2xl font-bold">{{ $post->title }}</h1>
                 <p class="mb-5 text-center text-sm text-slate-500 italic">By {{ $post->user->name }} | {{ \Carbon\Carbon::parse($post->created_at)->format('M d, Y') }}</p>
         
@@ -18,7 +18,7 @@
         
                 <div class="my-5">
                     @foreach ($post->tags as $tag)
-                    <a href="{{ route('tag', ['tag' => $tag->id]) }}" class="text-blue-500 hover:underline mr-3">{{ $tag->name }}</a>
+                    <a href="{{ route('tag', ['tag' => $tag->id]) }}" class="text-blue-500 hover:underline mr-3">#{{ $tag->name }}</a>
                     @endforeach
                 </div>
         

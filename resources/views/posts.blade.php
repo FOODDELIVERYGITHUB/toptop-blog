@@ -15,7 +15,7 @@
                             <a class="h2 m-0 text-white font-weight-bold" href="{{`/posts/post/$posts->id`}}">{{$posts->title}}</a>
                         </div>
                     </div>
-                   
+                  
                     @endforeach
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 </div>
                 @foreach ($post as $posts)    
                 <div class="position-relative overflow-hidden mb-3" style="height: 80px;">
-                    <img class="img-fluid w-100 h-100" src={{Storage::url($posts->filename)}} style="object-fit: cover;">
+                    <img class="img-fluid w-100 h-100" src="{{Storage::url($posts->filename)}}" style="object-fit: cover;">
                     <a href="" class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
                         {{$posts->category_id}}
                     </a>
@@ -36,6 +36,7 @@
         </div>
     </div>
 </div>
+
 <div class="container-fluid">
     <div class="container">
         <div class="d-flex align-items-center justify-content-between bg-light py-2 px-4 mb-3">
@@ -54,7 +55,7 @@
                                     <span class="px-1 text-white">/</span>
                                     <a class="text-white" href="">{{ $posts ->created_at}}</a>
                                 </div>
-                                <a class="h4 m-0 text-white" href="{{url("/posts/post/{$posts->id}")}}">{{$posts->title}}</a>
+                                <a class="h4 m-0 text-white" href="{{url('/posts/post/{$posts->id}')}}">{{$posts->title}}</a>
                             </div>
                         </div>
                     </div>
@@ -64,3 +65,6 @@
      
     </div>
 </div>
+Collapse
+has context menu
+Compose
