@@ -1,3 +1,5 @@
+@include('headers')
+
 <div class="container-fluid">
     <div class="d-flex justify-content-between">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
@@ -7,8 +9,9 @@
             <button class="btn btn-primary">{{ __('New') }}</button>
         </a>
     </div>
+  
 
-    <table  class="table">
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col">ID</th>
@@ -19,7 +22,7 @@
             </tr>
         </thead>
         @foreach($posts as $post)
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-4 px-4 h-20 flex justify-between items-center">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg  px-4 h-20 flex justify-between items-center">
                 <div class="text-gray-900 dark:text-gray-100">
                     <tr>
                         <td>{{$post->id}}</td>
@@ -40,6 +43,6 @@
                 </div>
             </div>
         @endforeach
-    </table>      
+    </table>   
+ 
 </div>
-
