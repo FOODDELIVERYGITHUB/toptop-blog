@@ -27,10 +27,12 @@
                             <a href="{{ route('tags.edit', ['tag' => $tag->id]) }}"> <i class="fas fa-pen"></i></a>
                             <form method="post" action="{{ route('tags.destroy', ['tag' => $tag->id]) }}" class="inline">
                                 {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
-                                <i class="fas fa-trash">
-                                    
-                                </i>
+                                {{ method_field('DELETE')}}
+                                <x-danger-button>
+                                    <i class="fas fa-trash">
+                                        {{ __('Delete') }}
+                                    </i>
+                                </x-danger-button>
                             </form>
                         </div>
                     </td>

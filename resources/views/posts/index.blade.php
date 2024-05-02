@@ -33,10 +33,12 @@
                         
                             <form method="post" action="{{ route('posts.destroy', ['post' => $post->id]) }}" class="inline">
                                 {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
-                                <i class="fas fa-trash">
-                                    
-                                </i>
+                                {{ method_field('DELETE')}}
+                                <x-danger-button>
+                                    <i class="fas fa-trash">
+                                        {{ __('Delete') }}
+                                    </i>
+                                </x-danger-button>
                             </form>    
                         </td> 
                     </tr>

@@ -26,10 +26,12 @@
                     <a href="{{ route('categories.edit', ['category' => $category->id]) }}"> <i class="fas fa-pen"></i></a>
                     <form method="post" action="{{ route('categories.destroy', ['category' => $category->id]) }}" class="inline">
                         {{ csrf_field() }}
-                        {{ method_field('DELETE') }}
-                        <i class="fas fa-trash">
-                            
-                        </i>
+                        {{ method_field('DELETE')}}
+                                <x-danger-button>
+                                    <i class="fas fa-trash">
+                                        {{ __('Delete') }}
+                                    </i>
+                                </x-danger-button>
                     </form>
                 </div>
             </td>
